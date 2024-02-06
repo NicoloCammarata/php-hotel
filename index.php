@@ -78,8 +78,14 @@
             <tr>
                 <?php
                     
+                    
                     foreach($hotels as $hotel) {
-                        echo '<td>'.$hotel['parking'].'</td>' ;
+                        if ($hotel['parking'] == true) {
+                            echo '<td>' .' had parking '.'</td>';
+                        }
+                        else {
+                            echo '<td>' .' no parking '.'</td>';
+                        }
                     }
                     
                 ?>
